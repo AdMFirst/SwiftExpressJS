@@ -1,8 +1,87 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
 body {
-  padding: 50px;
+  display: flex;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color: #4706FF;
+}
+
+.logocontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  
+}
+
+.logocontainer img{
+  width: 40%;
+  min-width: 200px;
+  height: auto;
+  align-items: center;
+}
+
+form.login{
+  margin: auto;
+  background-color: #FFDAD3;
+  width: 30%;
+}
+
+
+.login input[type=email], .login input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  border-radius:10px;
+}
+
+.login button {
+  background-color: black;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login button:hover {
+  opacity: 0.8;
+}
+
+
+.loginformcontainer {
+  padding: 16px;
+}
+
+.loginformcontainer .loginbutton {
+  border-radius: 10px;
+}
+
+.loginformcontainer .forgetpw {
+  float: right;
+}
+
+.loginformcontainer .newstudent {
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+
+
+
+@media only screen and (max-width: 480px) {
+  login.from {
+    max-width: 100%;
+    width: 100%;
+  }
 }

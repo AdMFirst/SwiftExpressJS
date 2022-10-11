@@ -1,0 +1,22 @@
+extends layout
+
+block content 
+    form(action='/', method='post', class='login')
+      div(class='logocontainer')
+        img(src='/images/logo 512 256.svg', class='logoImage', alt='Logo Swift e-learning')
+      
+      div(class='loginformcontainer')
+        label(for='emailLogin' class='loginGuide') Email
+        input(type='email', id='emailLogin', required)
+        label(for='pwLogin' class='loginGuide') Password
+        input(type='password', id='pwLogin', required)
+        a(href='/lupapassword', class='forgetpw') Lupa password?
+
+      div(class='loginformcontainer')
+        button(type='submit', class='loginbutton') Log In 
+        div(class="newstudent")
+          label siswa baru? 
+          a(href='/register') Daftar Sekarang!
+    
+
+      
