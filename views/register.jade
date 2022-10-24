@@ -1,0 +1,29 @@
+extend layout 
+
+block content 
+    from(action='/register', method='post', class='registrationform', id='registrationform')
+        img(src='/images/logo 512 256.svg', class='logoImage', alt='Logo Swift e-learning')
+        p Register Account 
+        div(class = 'filled-text-field')
+            label(for='nama') Nama* 
+            input(type='text', name='nama', id='namaformdaftar')
+        div(class = 'filled-text-field')
+            label(for='email') Email* 
+            input(type='email', name='email', id='emailformdaftar')
+        div(class = 'filled-text-field')
+            label(for='password') Password*
+            input(type='password', name='password', id='pwformdaftar')
+        div(class = 'filled-text-field')
+            label(for='password') Konfirmasi Password*
+            input(type='password', name='password', id='confirmpwformdaftar')
+        button(id='submitformdaftar' onclick="checkvalidity()") Daftar
+    script.
+        var checkvalidity = function () {
+    
+            if(document.getElementById("pwformdaftar").value == document.getElementById("confirmpwformdaftar").value) {
+                document.getElementById("registrationform").submit();
+            } else {
+                alert("Password dan konfirmasi password tidak sesuai!")
+            }
+        }
+    

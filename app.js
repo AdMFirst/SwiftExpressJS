@@ -24,11 +24,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var loginRouter = require('./routes/login');
+var registerRouter = require('./routes/register');
 
 // menambah object router ke app
 app.use('/index', indexRouter);
 app.use('/users', usersRouter);
 app.use('/', loginRouter);
+app.use('/register', registerRouter);
 
 
 

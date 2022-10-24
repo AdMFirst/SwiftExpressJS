@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var pool = require('./db')
+var pool = require('../db')
 
 router.get('/', function(req, res, next) {
   res.render('login', { title: 'Swift Login Page' });
