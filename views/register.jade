@@ -21,9 +21,15 @@ block content
         var checkvalidity = function () {
     
             if(document.getElementById("pwformdaftar").value == document.getElementById("confirmpwformdaftar").value) {
-                document.getElementById("registrationform").submit();
+                if(document.getElementById("pwformdaftar").value.length >= 8) {
+                    document.getElementById("registrationform").submit();
+                } else {
+                    alert("Password harus lebih dari 8 huruf!");
+                }
             } else {
                 alert("Password dan konfirmasi password tidak sesuai!")
             }
+            
+            
         }
     
